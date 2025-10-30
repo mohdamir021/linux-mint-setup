@@ -62,12 +62,12 @@ After that, install the following plugins for Oh My Zsh with the following comma
 
 Zsh-auto Suggestions
 ```
-git clone github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 Zsh-Syntax-Highlighting
 ```
-git clone github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 After that, edit `~/.zshrc` using `nano` or any text-editor. It's preferable to use `nano` instead, and run the following:
