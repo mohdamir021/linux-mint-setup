@@ -8,7 +8,7 @@ This is a small detailed guide on my personal Linux mint setup for my day-to-day
 
 2. The curiosity to learn Linux first-hand. I found out through the years that most servers and computers today are running Linux. Since I was curious as well, I want to learn it but I can't sacrifice my OS for terminal. That's when I found out there's a bunch of called Linux Distributions or Linux Distros, which is basically a Linux Desktop Environment that can provide a GUI for the user to use Linux. Linux Mint, is one of the easiest to migrate to, from Windows, if you have no prior experience to Linux. There's WSL for Window, but I don't think the learning curve for it is for me, since I want to experience Linux first-hand.
 
-3. Open source alternatives. Will explain here later
+3. Open source alternatives. Will explain here later ... trust
 
 4. The mindset. Simply having a mindset change had drive me to hop into Linux, like having to want to know every single thing that's happening to my computers, the developer experience, control you can enforce, "you own the hardware that you buy" type shi.
 
