@@ -103,6 +103,8 @@ If you somehow ever want to reconfigure `Powerlevel10k`, use the following comma
 p10k configure
 ```
 
+And now you're done with your terminal setup.
+
 
 ## Install Visual Studio Code
 
@@ -123,6 +125,77 @@ p10k configure
 ## Docker Setup
 
 You can read the full website guide for installing Docker in Linux Mint 22 [here](https://linuxiac.com/how-to-install-docker-on-linux-mint-22/).
+
+It's recommended you read it and understand, and you can't blindly paste any command or script you found on the internet.
+
+Either way here's a breakdown of what you need to do, if you prefer to skip reading it.
+
+```
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg
+```
+
+Add run the following, to add Docker's Official GPG Key.
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
+```
+As this is the security feature, that ensures that the software installed is authentic
+
+Now, add the repo:
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu noble stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+Then run the following to refresh the package list:
+```
+sudo apt update
+```
+
+You should see no error, and you may proceed to run the following to install docker.
+```
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+This installs the following Docker components:
+ - docker-ce: The Docker engine itself.
+ - docker-ce-cli: A command line tool that lets you talk to the Docker daemon.
+ - containerd.io: A container runtime that manages the container’s lifecycle.
+ - docker-buildx-plugin: This extension for Docker enhances the capabilities of building images, mainly focusing on multi-platform builds.
+ - docker-compose-plugin: A configuration management plugin that helps manage multi-container Docker applications using a single YAML file.
+
+That’s all! Docker should now be installed, service enabled, and set to start automatically on boot. In addition, check its status using the command below to confirm that everything is as expected:
+```
+sudo systemctl is-active docker # Expected output: active
+```
+
+After that, test the following either with:
+```
+sudo docker run hello-world
+```
+or
+```
+docker run -d -p 8080:80 docker/welcome-to-docker
+```
+
+Now, you may encounter some issues where you need to `sudo` every docker command.
+
+If so, you may need to enable non-root users to run docker commands.
+
+You can do this with the following commands:
+```
+sudo usermod -aG docker ${USER}  # add your user to the “docker” group
+newgrp docker                    # activate the changes to the group
+```
+
+You can now run Docker commands without `sudo` but it is important to note that:
+
+- this solution will work only for your current terminal session,
+- if you close the terminal, you will either have to execute the `newgrp` command above again or prefix docker commands with sudo, and,
+
+To make this change last permanently, just restart your Mint system.
+
+By now, you are done with the terminal setup for Docker.
+
 
 If you want a to manage docker as I do as well, download the deb package by going through the Docker Page for installing Docker Desktop in Linux [here](https://docs.docker.com/desktop/setup/install/linux/ubuntu/).
 
