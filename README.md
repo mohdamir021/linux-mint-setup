@@ -16,6 +16,7 @@ This is a small detailed guide on my personal Linux mint setup for my day-to-day
 
 (Tell windows user what to take notes of, be aware, and warned)
 
+
 # Before The Setup
 
 Once you, fully understand what you're getting into, time to dive into the first step of getting Linux in your device.
@@ -30,6 +31,52 @@ Once you, fully understand what you're getting into, time to dive into the first
 
 5. Setup in UEFI setup (Remove the B1tl0ck3r as well).
 
+
 # The Setup
 
 1. Turn on Bootloader and select the USB drive.
+
+
+# Desktop / Workspace Setup
+
+## Terminal Installation
+- git
+- wget (need to verify)
+- curl (need to verify)
+- xclip
+- wipe
+- nvim
+
+### Important Note
+
+To set your Git username and email, use the following commands in your terminal: 
+```
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+A detailed setup for the listed below are [here](/readme-dev-setup.md):
+- zsh to oh my zsh
+- docker
+
+## Backup
+- Mostly 1 or 2 batch weekly.
+
+## App Checklist
+- XFCE Terminal
+- Steam + Qt Proton
+- VSCode Local Install
+- Gimp
+- Audacity
+- Kdenlive
+- OBS Studio
+- -Tube
+- /Flex
+- Qbt
+- _|_ Browser
+
+
+## Extensions
+- Blur Cinnamon by klangman
+- Cinnamon Dynamic Wallpaper by TobiZog
+
