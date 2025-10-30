@@ -122,6 +122,32 @@ And now you're done with your terminal setup.
 }
 ```
 
+3. If you're on Linux, you might encounter something like this:
+
+    ![gnome error](/assets/gnome-error.png)
+
+    If so, then consider the following guide [here](https://forums.linuxmint.com/viewtopic.php?t=439152).
+
+    In short, basically, the keyrings aren't auto starting. If you open Seahorse (aka Passwords and Keys), and it doesn't have "Passwords" or "Certificates" on the left, or "Keys" for that matter, then GNOME Keyring is not launching at startup.
+    
+    Go to `Menu > Preferences > Startup Applications`
+
+    And add a new startup application, and enter the following dialogue:
+    ```
+    Name: Secrets Key Agent (or whatever you want)
+    Command: /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+    Description: GNOME Keyring Secrets Agent (or whatever you want)
+    ```
+
+    Or you may edit what's already there which is called `SSH Key Agent` and just add `,secrets,pkcs11` to the end of command at `--components=ssh` so it looks more like the following:
+    ```
+    /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+    ```
+
+    Be sure to restart your device as well, to see the changes.
+
+    
+
 ## Docker Setup
 
 You can read the full website guide for installing Docker in Linux Mint 22 [here](https://linuxiac.com/how-to-install-docker-on-linux-mint-22/).
