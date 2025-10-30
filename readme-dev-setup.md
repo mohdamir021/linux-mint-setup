@@ -225,3 +225,4 @@ By now, you are done with the terminal setup for Docker.
 
 If you want a to manage docker as I do as well, download the deb package by going through the Docker Page for installing Docker Desktop in Linux [here](https://docs.docker.com/desktop/setup/install/linux/ubuntu/).
 
+For signing in, head over to the Docker page [here](https://docs.docker.com/desktop/setup/sign-in/#credentials-management-for-linux-users)
