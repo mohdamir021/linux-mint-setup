@@ -41,9 +41,9 @@ chsh -s $(which zsh) # or use sudo if you don't have permission
 
 If needed, restart your computer or run `/bin/zsh` to see the new shell changes.
 
-### Installing Oh My Zsh
+### Installing `Oh My Zsh`
 
-You can refer to Oh My Zsh official web page [here](https://ohmyz.sh/) or head over to read the documentation [here](https://github.com/ohmyzsh/ohmyzsh/wiki) for more detailed installation breakdown.
+You can refer to `Oh My Zsh` official web page [here](https://ohmyz.sh/) or head over to read the documentation [here](https://github.com/ohmyzsh/ohmyzsh/wiki) for more detailed installation breakdown.
 
 For my personal Linux Mint 22 setup, run the following:
 
@@ -58,16 +58,21 @@ If somehow you see you don't have terminal startup to zsh, refer to the steps of
 /usr/bin/zsh
 ```
 
-After that, install the following plugins for Oh My Zsh with the following commands:
+After that, install the following plugins for `Oh My Zsh with` the following commands and `Powerlevel10k`:
 
-Zsh-auto Suggestions
+#### Zsh-auto Suggestions
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-Zsh-Syntax-Highlighting
+#### Zsh-Syntax-Highlighting
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+### Powerlevel10k
+```
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
 
 After that, edit `~/.zshrc` using `nano` or any text-editor. It's preferable to use `nano` instead, and run the following:
@@ -84,12 +89,7 @@ Your line should be as follows:
 plugins=(git ... zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
-Lastly, setup `Powerlevel10k` theme. Run the following command to get it:
-```
-git clone github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-```
-
-Then open `~/.zshrc` again and go the line `ZSH_THEME=robbyrussell` or similar, and set the value to `powerlevel10k/powerlevel10k` as follows:
+Lastly, setup `Powerlevel10k` theme in `~/.zshrc` again and go the line `ZSH_THEME=robbyrussell` or similar, and set the value to `powerlevel10k/powerlevel10k` as follows:
 ```
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
