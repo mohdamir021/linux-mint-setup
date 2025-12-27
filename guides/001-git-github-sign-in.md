@@ -37,3 +37,23 @@ git config --global user.email "you@example.com"
 It is straightforward af so don't mind.
 
 You only need an active email address to get your code.
+
+### Some Tweaks (if needed)
+
+If you run `git pull`, and you encounter the following:
+```
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+
+Select `git config pull.rebase true`
